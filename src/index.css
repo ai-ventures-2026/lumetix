@@ -1,0 +1,253 @@
+/* ============================================================
+   LUMETIX — Global Styles
+   Premium Lighting & Design Brand
+   ============================================================ */
+
+:root {
+  --color-black: #0a0a0a;
+  --color-dark: #1a1a1a;
+  --color-dark-mid: #242424;
+  --color-gold: #d4af37;
+  --color-gold-light: #e8cc6a;
+  --color-gold-dim: rgba(212, 175, 55, 0.15);
+  --color-gold-border: rgba(212, 175, 55, 0.35);
+  --color-silver: #888888;
+  --color-off-white: #f5f5f0;
+  --color-light-gray: #cccccc;
+  --color-mid-gray: #555555;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s ease;
+  --transition-slow: 0.6s ease;
+
+  --max-width: 1280px;
+  --section-padding: 120px 0;
+  --section-padding-sm: 80px 0;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-off-white);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+
+h1 { font-size: clamp(3rem, 7vw, 6rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+h4 { font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
+
+p {
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  color: var(--color-light-gray);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-gold);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  border: none;
+  background: none;
+}
+
+/* ---- Utility ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section--sm {
+  padding: var(--section-padding-sm);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* ---- Gold Divider ---- */
+.gold-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--color-gold);
+  margin: 0 auto;
+}
+
+.gold-divider--left {
+  margin: 0;
+}
+
+/* ---- Section Header ---- */
+.section-header {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.section-header .label {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  color: var(--color-off-white);
+  margin-bottom: 24px;
+}
+
+.section-header .gold-divider {
+  margin: 0 auto 28px;
+}
+
+.section-header p {
+  max-width: 540px;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  line-height: 1.8;
+}
+
+/* ---- Gold CTA Button ---- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  background: transparent;
+  transition: background var(--transition-base), color var(--transition-base);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.btn--filled {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.btn--filled:hover {
+  background: var(--color-gold-light);
+  color: var(--color-black);
+}
+
+/* ---- Dark Card ---- */
+.card {
+  background: var(--color-dark);
+  border: 1px solid var(--color-gold-border);
+  padding: 40px;
+  transition: border-color var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-border);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* ---- Selection ---- */
+::selection {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  :root {
+    --section-padding: 80px 0;
+    --section-padding-sm: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 48px;
+  }
+}
